@@ -444,11 +444,20 @@ form {
   padding: 3rem 0 5rem 0;
 }
 
-/* Detail */
+/* Modern Product Detail Styles */
+.section.product-detail {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
 .product-detail .details {
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 7rem;
+  gap: 4rem;
 }
 
 .product-detail .left {
@@ -457,147 +466,168 @@ form {
 }
 
 .product-detail .left .main {
-  text-align: center;
-  background-color: #f6f2f1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   height: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-detail .left .main img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  height: 100%;
 }
 
-.product-detail .thumbnails {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.product-detail .thumbnail {
-  width: 10rem;
-  height: 10rem;
-  background-color: #f6f2f1;
-  text-align: center;
-}
-
-.product-detail .thumbnail img {
-  height: 100%;
-  object-fit: contain;
+.product-detail .right span {
+  color: #6c757d;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
 .product-detail .right h1 {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 2rem;
+  font-size: 3.2rem;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 
 .product-detail .right .price {
-  font-size: 600;
-  font-size: 2rem;
-  color:#ee4d2d;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #ee4d2d;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.product-detail .right div {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-
-.product-detail .right select {
-  font-family: "Poppins", sans-serif;
-  width: 20rem;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  appearance: none;
-  outline: none;
-}
-
-.product-detail form {
-  
+.product-detail .right .price::before {
+  content: "RS";
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  font-weight: 400;
 }
 
 .product-detail .form {
-  margin-bottom: 3rem;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .product-detail .form input[type="number"] {
-  padding: 0.8rem;
+  width: 10rem;
+  padding: 1rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1.6rem;
   text-align: center;
-  width: 7.5rem;
-  margin-right: 2rem;
 }
 
-.product-detail .form input[type="submit"] {
-  text-align: center;
-
-}
-
-.product-detail .form .addCart{
+.product-detail .form .addCart {
   background: #ee4d2d;
-  box-shadow:none;
-  padding: 0.8rem 4rem;
   color: white;
-  border-radius: 3rem;
-  text-decoration:none;
+  padding: 1.2rem 4rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .product-detail .form .addCart:hover {
-
-        background-color: red;
-
+  background: #d63031;
+  transform: translateY(-2px);
 }
 
 .product-detail h3 {
-  text-transform: uppercase;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2d3436;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dfe6e9;
+}
+
+.product-detail p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #636e72;
+}
+
+.stock-info {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #ffeaa7;
+  color: #d35400;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  margin: 1rem 0 2rem;
+}
+
+.chat-seller {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.chat-seller button {
+  background: white;
+  border: 2px solid #ee4d2d;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-seller button:hover {
+  background: #fff5f5;
+}
+
+.chat-seller i {
+  color: #ee4d2d;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.own-product-notice {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #ffe3e3;
+  color: #e03131;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 996px) {
-  .product-detail .left {
-    width: 30rem;
-    height: 45rem;
-  }
-
   .product-detail .details {
+    padding: 2rem;
+    grid-template-columns: 1fr;
     gap: 3rem;
   }
-
-  .product-detail .thumbnails {
-    width: 30rem;
-    gap: 0.5rem;
-  }
-
-  .product-detail .thumbnail {
-    width: auto;
-    height: 10rem;
-    background-color: #f6f2f1;
-    text-align: center;
-    padding: 0.5rem;
+  
+  .product-detail .right h1 {
+    font-size: 2.8rem;
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .product-detail .details {
-    grid-template-columns: 1fr;
+@media only screen and (max-width: 768px) {
+  .product-detail .form {
+    flex-direction: column;
+    align-items: flex-start;
   }
-
-  .product-detail .right {
-    margin-top: 10rem;
-  }
-
-  .product-detail .left {
+  
+  .product-detail .form input[type="number"] {
     width: 100%;
-    height: 45rem;
   }
-
-  .product-detail .details {
-    gap: 3rem;
-  }
-
-  .product-detail .thumbnails {
+  
+  .product-detail .form .addCart {
     width: 100%;
-    gap: 0.5rem;
+    text-align: center;
   }
 }
 
@@ -765,24 +795,22 @@ th:last-child {
     <div class="details container-md">
       <div class="left">
         <div class="main">
-          <img src="../images/<?php echo $image; ?>" alt="">
+          <img src="../images/<?php echo $image; ?>" alt="<?php echo $title; ?>">
         </div>
-        
       </div>
       <div class="right">
-        <span>Home/<?php echo $category; ?></span>
+        <span>Home / <?php echo $category; ?></span>
         <h1><?php echo $title; ?></h1>
-        <div class="price">RS <?php echo $price; ?></div>
-        <form>
-          <div>
-          <h5 style="color:red;">Available stock : <?php echo $quantity; ?></h5>
-          </div>
-        </form>
+        <div class="price"><?php echo $price; ?></div>
+        
+        <div class="stock-info">
+          <i class="fa fa-cubes"></i> Available stock: <?php echo $quantity; ?>
+        </div>
 
+        <?php if($email!=$seller_id){ ?>
         <form class="form" method="POST">
-          <?php if($email!=$seller_id){?>
           <input type="number" name="quantity" value="1" min="1" max="<?php echo $quantity; ?>">
-          <input type="hidden"name="id" value="<?php echo $row['id'];?>"/>
+          <input type="hidden" name="id" value="<?php echo $row['id'];?>"/>
           <input type="hidden" value="<?php echo $title; ?>" name="title">
           <input type="hidden" value="<?php echo $description; ?>" name="description">
           <input type="hidden" value="<?php echo $category; ?>" name="category">
@@ -791,21 +819,26 @@ th:last-child {
           <input type="hidden" value="<?php echo $seller_id; ?>" name="seller_id">
           
           <input type="submit" value="Add To Cart" class="addCart" name="addcart" id="addcart">
-          <?php } else {echo "<p style='color:red;'> &#9746; Sorry, You cannot purchase your own item! </p>";} ?>
         </form>
-        <h3>Product Detail</h3>
+        <?php } else { ?>
+          <div class="own-product-notice">
+            <i class="fa fa-exclamation-circle"></i> Sorry, you cannot purchase your own item!
+          </div>
+        <?php } ?>
+
+        <h3>Product Details</h3>
         <p><?php echo $description; ?></p>
-        <br>
-        <br>
-        <br>
-        <?php if($email!=$seller_id){?>
+
+        <?php if($email!=$seller_id){ ?>
+        <div class="chat-seller">
           <form method="post" action="chat.php?pid=<?php echo $seller_id; ?>">
-            <button type="submit" name="chat" id="chat" class="btn btn-primary" style="background:white;">
+            <button type="submit" name="chat" id="chat">
               <input type="hidden" value="<?php echo $seller_username; ?>" name="seller_username">
-            <i class='fa fa-weixin' style="font-style:normal;color:#ee4d2d;font-size:24px;">&nbsp;Chat With Seller</i>
+              <i class="fa fa-weixin"></i>Chat With Seller
             </button>
           </form>
-          <?php } ?>
+        </div>
+        <?php } ?>
       </div>
     </div>
   </section>
